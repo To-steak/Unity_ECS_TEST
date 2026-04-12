@@ -38,5 +38,3 @@ class BulletBaker : Baker<BulletAuthoring>
         });
     }
 }
-
-
