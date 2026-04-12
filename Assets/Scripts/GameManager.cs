@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         _currentSystem = "Worst";
         SetSystemEnabled(typeof(WorstCollisionSystem), true);
         SetSystemEnabled(typeof(BestCollisionSystem), false);
-        SetSystemEnabled(typeof(CacheCollisionSystem), false);
+        SetSystemEnabled(typeof(BitCollisionSystem), false);
         UpdateSystemUI();
         ResetAverage();
     }
@@ -117,17 +117,17 @@ public class GameManager : MonoBehaviour
         _currentSystem = "Best";
         SetSystemEnabled(typeof(WorstCollisionSystem), false);
         SetSystemEnabled(typeof(BestCollisionSystem), true);
-        SetSystemEnabled(typeof(CacheCollisionSystem), false);
+        SetSystemEnabled(typeof(BitCollisionSystem), false);
         UpdateSystemUI();
         ResetAverage();
     }
 
-    public void ActivateCacheSystem()
+    public void ActivateBitSystem()
     {
-        _currentSystem = "Cache";
+        _currentSystem = "Bit";
         SetSystemEnabled(typeof(WorstCollisionSystem), false);
         SetSystemEnabled(typeof(BestCollisionSystem), false);
-        SetSystemEnabled(typeof(CacheCollisionSystem), true);
+        SetSystemEnabled(typeof(BitCollisionSystem), true);
         UpdateSystemUI();
         ResetAverage();
     }

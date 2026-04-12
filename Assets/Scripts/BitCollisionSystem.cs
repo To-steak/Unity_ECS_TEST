@@ -5,7 +5,7 @@ using Unity.Collections;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-partial struct CacheCollisionSystem : ISystem
+partial struct BitCollisionSystem : ISystem
 {
     private const float CELL_SIZE = 10f;
     private const int GRID_SIZE = 200;
