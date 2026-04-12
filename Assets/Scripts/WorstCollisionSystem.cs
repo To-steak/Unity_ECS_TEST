@@ -3,7 +3,8 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-partial struct CollisionSystem : ISystem
+[DisableAutoCreation]
+partial struct WorstCollisionSystem : ISystem
 {
     [BurstCompile]
     public void OnCreate(ref SystemState state)
