@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerAuthoring
   enemyPrefab: {fileID: 5989488873455488537, guid: f962ce98a42a748428a77c6c67f3516b, type: 3}
-  spawnCount: 200
+  spawnCount: 2000
 --- !u!4 &796374456
 Transform:
   m_ObjectHideFlags: 0

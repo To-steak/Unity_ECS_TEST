@@ -16,7 +16,7 @@ partial struct EnemySystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         float deltaTime = SystemAPI.Time.DeltaTime;
-        float range = 100f * 100f;
+        float range = 1000f * 1000f;
 
         foreach (var (transform, enemy) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<Enemy>>())
         {

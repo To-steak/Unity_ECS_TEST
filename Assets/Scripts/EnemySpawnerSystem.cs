@@ -31,10 +31,10 @@ partial struct EnemySpawnerSystem : ISystem
             state.EntityManager.Instantiate(spawner.EnemyPrefab, enemies);
             foreach (var enemy in enemies)
             {
-                float2 randomPos2D = _random.NextFloat2Direction() * _random.NextFloat(0f, 100f);
+                float2 randomPos2D = _random.NextFloat2Direction() * _random.NextFloat(0f, 1000f);
                 float3 spawnPosition = new float3(randomPos2D.x, 0, randomPos2D.y);
 
-                state.EntityManager.SetComponentData(enemy, LocalTransform.FromPosition(spawnPosition));
+                state.EntityManager.SetComponentData(enemy, LocalTransform.FromPositionRotationScale(spawnPosition, quaternion.identity, 15.0f));
             }
 
             enemies.Dispose();

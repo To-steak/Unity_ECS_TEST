@@ -3,7 +3,6 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-[DisableAutoCreation]
 partial struct WorstCollisionSystem : ISystem
 {
     [BurstCompile]
