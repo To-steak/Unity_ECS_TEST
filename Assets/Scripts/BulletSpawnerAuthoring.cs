@@ -1,25 +1,25 @@
 using Unity.Entities;
 using UnityEngine;
 
-public struct Spawner : IComponentData
+public struct BulletSpawner : IComponentData
 {
     public Entity BulletPrefab;
     public int SpawnCount;
 }
 
-class SpawnerAuthoring : MonoBehaviour
+class BulletSpawnerAuthoring : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public int spawnCount;
 }
 
-class SpawnerAuthoringBaker : Baker<SpawnerAuthoring>
+class BulletSpawnerAuthoringBaker : Baker<BulletSpawnerAuthoring>
 {
-    public override void Bake(SpawnerAuthoring authoring)
+    public override void Bake(BulletSpawnerAuthoring authoring)
     {
         var entity = GetEntity(TransformUsageFlags.None);
 
-        AddComponent(entity, new Spawner
+        AddComponent(entity, new BulletSpawner
         {
            BulletPrefab = GetEntity(authoring.bulletPrefab, TransformUsageFlags.Dynamic),
            SpawnCount = authoring.spawnCount

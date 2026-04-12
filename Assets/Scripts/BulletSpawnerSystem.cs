@@ -4,13 +4,15 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-partial struct SpawnerSystem : ISystem
+partial struct BulletSpawnerSystem : ISystem
 {
     private Random _random;
     private EntityQuery _bulletQuery;
 
     public void OnCreate(ref SystemState state)
     {
+        state.RequireForUpdate<BulletSpawner>();
+        
         _random = new Random((uint)System.DateTime.Now.Ticks);
         _bulletQuery = state.GetEntityQuery(ComponentType.ReadOnly<Bullet>());
     }
@@ -19,8 +21,9 @@ partial struct SpawnerSystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         int currentBulletCount = _bulletQuery.CalculateEntityCount();
-        var spawner = SystemAPI.GetSingleton<Spawner>();
+        var spawner = SystemAPI.GetSingleton<BulletSpawner>();
         int targetCount = spawner.SpawnCount;
+        
         if (currentBulletCount < targetCount)
         {
             int size = targetCount - currentBulletCount;
