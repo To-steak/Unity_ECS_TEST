@@ -15,7 +15,7 @@ partial struct BulletSystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         float deltaTime = SystemAPI.Time.DeltaTime;
-        float maxDistance = 10f * 10f;
+        float maxDistance = 100f * 100f;
 
         var endSimulationEntityCommandBuffer = SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>();
         var endSimulationEntity = endSimulationEntityCommandBuffer.CreateCommandBuffer(state.WorldUnmanaged);
