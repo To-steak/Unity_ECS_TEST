@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log($"CPU: {SystemInfo.processorType}");
+        Debug.Log($"GPU: {SystemInfo.graphicsDeviceName}");
+        Debug.Log($"RAM: {SystemInfo.systemMemorySize}MB");
+        
         timeLeft = updateInterval;
         _world = World.DefaultGameObjectInjectionWorld;
 

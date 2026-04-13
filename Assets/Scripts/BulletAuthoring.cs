@@ -10,7 +10,6 @@ public struct Bullet : IComponentData
     public float Speed;
     public float Radius;
     public float Power;
-    public FixedList64Bytes<Entity> TargetEntities;
 }
 
 public class BulletAuthoring : MonoBehaviour

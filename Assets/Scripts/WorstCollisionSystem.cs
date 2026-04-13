@@ -32,6 +32,7 @@ partial struct WorstCollisionSystem : ISystem
                 {
                     ecb.DestroyEntity(enemyEntity);
                     // todo: enemyEntity에게 bulletDamage 입히기
+                    break;
                 }
             }
         }
