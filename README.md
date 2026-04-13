@@ -1,6 +1,7 @@
 # Unity ECS Collision Optimization Experiment
 
 Unity ECS(Entity Component System)를 활용하여 **10만 개의 투사체(Bullet)와 2,000개의 적(Enemy)** 사이의 충돌 연산을 최적화하는 과정을 기록한 프로젝트입니다.
+[Unity ECS로 최적화 해보기 (Blog)](https://to-steak.github.io/posts/Unity_ECS%20Test.html)   
 
 ## Tech Stack
 - **Unity**: `6000.3.11 f1`
