@@ -44,5 +44,6 @@ Unity ECS(Entity Component System)를 활용하여 **10만 개의 투사체(Bull
 ---
 
 ### Demo Video
-[![ECS Build Video](https://img.youtube.com/vi/pQRCIHdseh8/0.jpg)](https://youtu.be/pQRCIHdseh8?si=AKEtAZwTHcyrmg6T)
+아래 영상은 빌드된 프로젝트 시연 영상입니다.
+[![ECS Build Video](https://img.youtube.com/vi/pQRCIHdseh8/0.jpg)](https://youtu.be/pQRCIHdseh8?si=AKEtAZwTHcyrmg6T)   
 *(이미지를 클릭하면 유튜브 영상으로 이동합니다.)*
