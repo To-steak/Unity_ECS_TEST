@@ -35,7 +35,7 @@ Unity ECS(Entity Component System)를 활용하여 **10만 개의 투사체(Bull
 | :--- | :--- | :--- | :--- |
 | **Worst (Naive)** | 282ms | 3.54 | $O(m \times n)$ 전수 조사 |
 | **Best (HashMap)** | 13.58ms | 73.63 | $O(m + n)$ 공간 분할 |
-| **Bitwise (BitArray)** | **11.03ms** | **90.66** | 해시 조회 전 비트 필터링 추가 |
+| **Bitwise (BitArray + HashMap)** | **11.03ms** | **90.66** | 해시 조회 전 비트 필터링 추가 |
 
 ## Key Learnings
 * **GPU Instancing & Mesh Simplification**: 10만 개 이상의 개체를 렌더링하기 위해 Sphere Mesh를 Cube로 교체하고 GPU Instancing을 활용하여 Draw Call 및 삼각형 수를 98% 이상 절감했습니다.
