@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
 
         // 초기 상태: Best만 활성화
         ActivateBestSystem();
+        // ActivateBitSystem();
     }
 
     void Update()

@@ -38,7 +38,7 @@ Unity ECS(Entity Component System)를 활용하여 **10만 개의 투사체(Bull
 | **Bitwise (BitArray + HashMap)** | **11.03ms** | **90.66** | 해시 조회 전 비트 필터링 추가 |
 
 ## Key Learnings
-* **GPU Instancing & Mesh Simplification**: 10만 개 이상의 개체를 렌더링하기 위해 Sphere Mesh를 Cube로 교체하고 GPU Instancing을 활용하여 Draw Call 및 삼각형 수를 98% 이상 절감했습니다.
+* **Mesh Simplification**: 10만 개 이상의 개체를 렌더링하기 위해 Sphere Mesh를 Cube로 교체하여 삼각형 수를 153M에서 2.4M로 단축할 수 있었습니다.
 * **Structural Changes**: `foreach` 루프 내 직접적인 `DestroyEntity`는 구조적 변경을 일으키므로, **ECB(Entity Command Buffer)**를 사용하여 루프 종료 후 일괄 처리하도록 설계했습니다.
 * **Bitwise Filtering**: 데이터 밀도가 낮은 광활한 공간에서는 해시 조회 비용조차 아끼기 위해 비트 배열을 필터로 사용하는 것이 효과적임을 확인했습니다.
 
