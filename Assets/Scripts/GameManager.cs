@@ -40,8 +40,9 @@ public class GameManager : MonoBehaviour
         _world = World.DefaultGameObjectInjectionWorld;
 
         // 초기 상태: Best만 활성화
-        ActivateBestSystem();
+        // ActivateBestSystem();
         // ActivateBitSystem();
+        ActivateNativeSystem();
     }
 
     void Update()

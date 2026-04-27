@@ -13,7 +13,6 @@ partial struct BitCollisionSystem : ISystem
 
     private EntityQuery _enemyQuery;
 
-    [BurstCompile]
     public void OnCreate(ref SystemState state)
     {
         _enemyQuery = state.GetEntityQuery(ComponentType.ReadOnly<Enemy>(), ComponentType.ReadOnly<LocalTransform>());
