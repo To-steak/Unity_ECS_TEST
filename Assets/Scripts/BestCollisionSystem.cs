@@ -79,7 +79,7 @@ partial struct BestCollisionSystem : ISystem
     }
 }
 
-struct EnemyGridData
+struct EnemyHashGridData
 {
     public Entity Entity;
     public float3 Position;

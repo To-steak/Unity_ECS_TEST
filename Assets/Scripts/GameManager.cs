@@ -113,6 +113,8 @@ public class GameManager : MonoBehaviour
         SetSystemEnabled(typeof(WorstCollisionSystem), true);
         SetSystemEnabled(typeof(BestCollisionSystem), false);
         SetSystemEnabled(typeof(BitCollisionSystem), false);
+        SetSystemEnabled(typeof(NativeArrayCollisionSystem), false);
+
         UpdateSystemUI();
         ResetAverage();
     }
@@ -123,6 +125,8 @@ public class GameManager : MonoBehaviour
         SetSystemEnabled(typeof(WorstCollisionSystem), false);
         SetSystemEnabled(typeof(BestCollisionSystem), true);
         SetSystemEnabled(typeof(BitCollisionSystem), false);
+        SetSystemEnabled(typeof(NativeArrayCollisionSystem), false);
+
         UpdateSystemUI();
         ResetAverage();
     }
@@ -133,6 +137,20 @@ public class GameManager : MonoBehaviour
         SetSystemEnabled(typeof(WorstCollisionSystem), false);
         SetSystemEnabled(typeof(BestCollisionSystem), false);
         SetSystemEnabled(typeof(BitCollisionSystem), true);
+        SetSystemEnabled(typeof(NativeArrayCollisionSystem), false);
+
+        UpdateSystemUI();
+        ResetAverage();
+    }
+
+    public void ActivateNativeSystem()
+    {
+        _currentSystem = "Native";
+        SetSystemEnabled(typeof(WorstCollisionSystem), false);
+        SetSystemEnabled(typeof(BestCollisionSystem), false);
+        SetSystemEnabled(typeof(BitCollisionSystem), false);
+        SetSystemEnabled(typeof(NativeArrayCollisionSystem), true);
+
         UpdateSystemUI();
         ResetAverage();
     }
